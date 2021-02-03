@@ -14,19 +14,21 @@ export const Toggle = ({theme, toggleTheme}) => {
       <BsMoon size="30px" 
       style={{
         color:"#2ecc71", 
-        position:"absolute",
+        position:"fixed",
         top: "6rem",
         right: "4rem",
         transition: "all .5s linear",
-        cursor: "pointer"
+        cursor: "pointer",
+        zIndex: "1"
      }} /> : 
       <IoSunny size="30px" style={{
         color:"#fed330", 
-        position:"absolute",
+        position:"fixed",
         top: "6rem",
         right: "4rem",
         transition: "all .5s linear",
-        cursor: "pointer"
+        cursor: "pointer",
+        zIndex: "1"
      }} />}
     </div>
   ); 

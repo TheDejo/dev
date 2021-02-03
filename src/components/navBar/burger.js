@@ -22,7 +22,6 @@ const StyledBurger = styled.div`
       width: 2rem;
       height: 0.25rem;
       background-color: ${({open}) => open ? '#fed330' : '#fed330'};
-      border-radius: 10px;
       transform-origin:1px;
       transition: all 0.3s linear;
   
@@ -41,12 +40,21 @@ const StyledBurger = styled.div`
       }
     
   }
+
+  @media(max-width: 285px) {
+    right: 1px;
+    left: 25px;
+  }
 } 
   
 `;
 
 const Burger = () => {
   const [open, setOpen] = useState(false)
+
+  const toggle = () => {
+    setOpen(!open)
+  }
 
   return (
     <>
@@ -55,7 +63,7 @@ const Burger = () => {
       <div />
       <div />
     </StyledBurger>
-    <Content open={open}/>
+    <Content open={open} toggle={toggle}/>
     </>
   );
 };

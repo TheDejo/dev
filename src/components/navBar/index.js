@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import {Link} from 'react-scroll';
 import styled from 'styled-components';
 
 
@@ -11,16 +11,17 @@ const Nav = styled.nav`
   max-width: 100vw;
   width: 100%;
   height:65px;
-  background: #000;
-  border-bottom: 3px solid #fed330;
+  background: transparent;
   padding: 0 20px;
-  position: relative;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 
   .logo {
     height: 60px;
+    cursor: pointer;
   }
  
 `;
@@ -30,7 +31,7 @@ class Header extends Component {
     return (
       <Nav >
       <div className="logo">
-      <Link href="/" >
+      <Link to="text-box" smooth={true} duration={1000} >
           <img alt="logo" src={Logo} className="logo" />
       </Link>
       </div>

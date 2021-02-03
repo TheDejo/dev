@@ -4,7 +4,10 @@ import {useDarkMode} from './colorMode'
 import {Toggle} from './Toggle'
 import Header from './navBar';
 import About from './about';
-import Article from './articles'
+import Bio from './bio';
+import Contact from './contact';
+import Footer from './footer'
+
 import { GlobalStyles, lightTheme, darkTheme } from '../style/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import '../style/App.css';
@@ -23,7 +26,9 @@ const App = () => {
        <Header/>
        <Toggle theme={theme} toggleTheme={toggleTheme}/>
        <About />
-       <Article />
+       <Bio />
+       <Contact />
+       <Footer />
       </ThemeProvider>
       
     </BrowserRouter>
